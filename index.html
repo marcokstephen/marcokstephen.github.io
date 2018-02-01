@@ -1,81 +1,115 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>BBC Radio with time zone delays</title>
-  <meta name="description" content="Listen to BBC Radio 2, Radio 4, and Radio 1 with 
-       hour delays to allow real-time listening in different time zones" />
-</head>
-<body>
-  
-<h1>BBC Radio with time zone delays</h1>
-  This site streams BBC Radio 1, Radio 2, and Radio 4 with hourly delays to give the illusion
-  of real-time listening regardless of your time zone. Currently it supports hourly time zones
-  (sorry Newfoundland) ranging from Britain minus four hours, to Britain minus eight hours.
-  Sorry, no time zones ahead of Britain. :(
-  
-<h3>Time zone guide</h3>
-This guide is off by an hour for half a month in March and half a month in November,
-  given the different dates for daylight savings between Britain and North America.
-<ul>
-  <li>Newfoundland: Britain - 3.5 hours</li>
-  <li>Atlantic: Britain - 4 hours</li>
-  <li>Eastern: Britain - 5 hours</li>
-  <li>Central: Britain - 6 hours</li>
-  <li>Mountain: Britain - 7 hours</li>
-  <li>Pacific: Britain - 8 hours</li>
-</ul>
-  
-<h3>How do I use this?</h3>
-If you are on a desktop computer you can simply click the stream and it should work in your browser.
-  If you are on mobile, you may need to open the stream in an app like VLC. Copy the link of the stream you want,
-  find an option to "Open Network Stream" within your desired app, and paste the link of the stream there.
-  
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<h2>BBC Radio 2:</h2>
-<ul>
-  <li>-3.5 Hours (not yet available)</li>
-  <li><a href="http://player.radioforexpats.co.uk/radio2/4">-4 Hours</a></li>
-  <li><a href="http://player.radioforexpats.co.uk/radio2/5">-5 Hours</a></li>
-  <li><a href="http://player.radioforexpats.co.uk/radio2/6">-6 Hours</a></li>
-  <li><a href="http://player.radioforexpats.co.uk/radio2/7">-7 Hours</a></li>
-  <li><a href="http://player.radioforexpats.co.uk/radio2/8">-8 Hours</a></li>
-</ul>
-  
-<h2>BBC Radio 4:</h2>
-<ul>
-  <li>-3.5 Hours (not yet available)</li>
-  <li><a href="http://player.radioforexpats.co.uk/radio4fm/4">-4 Hours</a></li>
-  <li><a href="http://player.radioforexpats.co.uk/radio4fm/5">-5 Hours</a></li>
-  <li><a href="http://player.radioforexpats.co.uk/radio4fm/6">-6 Hours</a></li>
-  <li><a href="http://player.radioforexpats.co.uk/radio4fm/7">-7 Hours</a></li>
-  <li><a href="http://player.radioforexpats.co.uk/radio4fm/8">-8 Hours</a></li>
-</ul>
-  
-<h2>BBC Radio 1:</h2>
-<ul>
-  <li>-3.5 Hours (not yet available)</li>
-  <li><a href="http://player.radioforexpats.co.uk/radio1/4">-4 Hours</a></li>
-  <li><a href="http://player.radioforexpats.co.uk/radio1/5">-5 Hours</a></li>
-  <li><a href="http://player.radioforexpats.co.uk/radio1/6">-6 Hours</a></li>
-  <li><a href="http://player.radioforexpats.co.uk/radio1/7">-7 Hours</a></li>
-  <li><a href="http://player.radioforexpats.co.uk/radio1/8">-8 Hours</a></li>
-</ul>
-  
-<h3>Status</h3>
-<ul>
-  <li><a href="http://player.radioforexpats.co.uk/status.xsl">Check status here</a></li>
-</ul>
-  
-<h3>User Testimonials</h3>
-"wow, it's like being in Britain!" <br />
-  - nobody
-  
-  <h3>Debug Streams</h3>
-  <ul>
-    <li><a href="http://player.radioforexpats.co.uk/radio1/1">Radio 1 -1 Hour</a></li>
-    <li><a href="http://player.radioforexpats.co.uk/radio2/1">Radio 2 -1 Hour</a></li>
-    <li><a href="http://player.radioforexpats.co.uk/radio4fm/1">Radio 4 -1 Hour</a></li>
-  </ul>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="mystyle.css">
 
-</body>
+    <meta name="description" content="Listen to BBC Radio 2, Radio 4, and Radio 1 with hour delays to allow real-time listening in different time zones" />
+
+    <title>BBC Radio - Time Zone Delays</title>
+  </head>
+
+  <body>
+
+    <div class="jumbotron">
+      <h1 class="display-4">BBC Radio with time zone delays</h1>
+      <p class="lead">Listen to BBC Radio 1, Radio 2, and Radio 4 with pre-set delays to give the illusion of real-time listening regardless of your time zone.</p>
+    </div>
+    
+    <div class="container">
+      Currently, all Canadian time zones are supported ranging from Britain minus 3.5 hours (Newfoundland), to Britain minus 8 hours (Pacific). Sorry, no time zones ahead of Britain!
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="container">
+      <h3>Streams</h3>
+      <div class="row">
+        <div class="col-sm">
+          <ul class="list-group">
+            <li class="list-group-item text-center"><h4>BBC Radio 1</h4></li>
+            <a href="http://player.radioforexpats.co.uk/radio1/3-5" class="list-group-item list-group-item-action">Newfoundland (-3.5)</a>
+            <a href="http://player.radioforexpats.co.uk/radio1/4" class="list-group-item list-group-item-action">Atlantic (-4)</a>
+            <a href="http://player.radioforexpats.co.uk/radio1/5" class="list-group-item list-group-item-action">Eastern (-5)</a>
+            <a href="http://player.radioforexpats.co.uk/radio1/6" class="list-group-item list-group-item-action">Central (-6)</a>
+            <a href="http://player.radioforexpats.co.uk/radio1/7" class="list-group-item list-group-item-action">Mountain (-7)</a>
+            <a href="http://player.radioforexpats.co.uk/radio1/8" class="list-group-item list-group-item-action">Pacific (-8)</a>
+          </ul>
+        </div>
+        <div class="col-sm">
+          <ul class="list-group">
+            <li class="list-group-item text-center"><h4>BBC Radio 2</h4></li>
+            <a href="http://player.radioforexpats.co.uk/radio2/3-5" class="list-group-item list-group-item-action">Newfoundland (-3.5)</a>
+            <a href="http://player.radioforexpats.co.uk/radio2/4" class="list-group-item list-group-item-action">Atlantic (-4)</a>
+            <a href="http://player.radioforexpats.co.uk/radio2/5" class="list-group-item list-group-item-action">Eastern (-5)</a>
+            <a href="http://player.radioforexpats.co.uk/radio2/6" class="list-group-item list-group-item-action">Central (-6)</a>
+            <a href="http://player.radioforexpats.co.uk/radio2/7" class="list-group-item list-group-item-action">Mountain (-7)</a>
+            <a href="http://player.radioforexpats.co.uk/radio2/8" class="list-group-item list-group-item-action">Pacific (-8)</a>
+          </ul>
+        </div>
+        <div class="col-sm">
+          <ul class="list-group">
+            <li class="list-group-item text-center"><h4>BBC Radio 4</h4></li>
+            <a href="http://player.radioforexpats.co.uk/radio4fm/3-5" class="list-group-item list-group-item-action">Newfoundland (-3.5)</a>
+            <a href="http://player.radioforexpats.co.uk/radio4fm/4" class="list-group-item list-group-item-action">Atlantic (-4)</a>
+            <a href="http://player.radioforexpats.co.uk/radio4fm/5" class="list-group-item list-group-item-action">Eastern (-5)</a>
+            <a href="http://player.radioforexpats.co.uk/radio4fm/6" class="list-group-item list-group-item-action">Central (-6)</a>
+            <a href="http://player.radioforexpats.co.uk/radio4fm/7" class="list-group-item list-group-item-action">Mountain (-7)</a>
+            <a href="http://player.radioforexpats.co.uk/radio4fm/8" class="list-group-item list-group-item-action">Pacific (-8)</a>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="container">
+      <div class="alert alert-info" role="alert">
+        These streams will be one hour ahead for one week in March and November due to differing daylight savings dates used between Britain and North America!
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="container">
+      <h3>How do I use this?</h3>
+      If you are on a desktop computer you can simply click the stream and it should work in your browser. If you are on mobile, you may need to open the stream in an app like VLC. Copy the link of the stream you want, find an option to "Open Network Stream" within your desired app, and paste the link of the stream there.
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="container">
+      <h3>Updates</h3>
+      <ul>
+        <li>No updates yet.</li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <h3>Status</h3>
+      <ul>
+        <li><a href="http://player.radioforexpats.co.uk/status.xsl">Check status here</a></li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <h3>User Testimonials</h3>
+      "wow, it's like being in Britain!"<br />
+      - nobody
+    </div>
+
+    <div class="spacer"></div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+
+  </body>
 </html>
